@@ -191,6 +191,15 @@
       "caption": "Balloon enteroscopy uses an endoscope and balloon-assisted technique to examine portions of the small intestine beyond the reach of routine endoscopy.",
       "why_visual": "The long, folded small intestine and the way an overtube and balloon help advance the scope are difficult to understand from prose alone.",
       "prompt": "Create a landscape, print-ready medical textbook illustration of balloon enteroscopy. Use a clean abdominal cutaway showing the stomach, duodenum, long coiled small intestine, and colon for orientation. Show a flexible enteroscope passing through the mouth and upper digestive tract into the small intestine, with a transparent overtube and one or two small balloons alternately anchoring the bowel so the scope can advance. Add one restrained inset showing a biopsy forceps or hemostasis tool passing through the scope, without blood or graphic tissue. Make clear that the scope examines selected portions of the small bowel rather than every loop being visible at once. Use at most four short labels: small intestine, overtube, balloon, scope. No brand names, no exaggerated balloon size, no text-heavy infographic, accurate anatomy, generous margins, landscape 4:3, high-resolution print-ready composition."
+    },
+    {
+      "priority": "high",
+      "procedure": "Ultrasound examination",
+      "image_type": "realistic clinical scene with simplified sound-wave inset",
+      "file_name": "ultrasound_transducer_gel_and_sound_wave_path.png",
+      "caption": "Ultrasound uses a handheld transducer and gel to create images from reflected sound waves without ionizing radiation.",
+      "why_visual": "Patients often benefit from seeing how the transducer and gel create an image and how the external scan differs from an X-ray or invasive procedure.",
+      "prompt": "Create a landscape, print-ready medical textbook illustration of a routine abdominal ultrasound. Show a respectful consenting adult lying comfortably while a trained sonographer gently moves a handheld transducer over gel on the upper abdomen. Use a realistic but calm clinical setting, visible monitor with a deliberately non-diagnostic grayscale ultrasound texture, and a clean anatomical inset showing sound waves traveling from the transducer into soft tissue and returning echoes to form an image. Show only a small representative abdominal cross-section, not a specific disease finding. Use at most three short labels: transducer, gel, reflected sound waves. Do not show radiation, needles, an incision, or a fetal examination; do not make the monitor image look like a real identifiable patient study; no brand names, generous margins, 4:3 landscape, high-resolution print-ready composition."
     }
   ]
 }
