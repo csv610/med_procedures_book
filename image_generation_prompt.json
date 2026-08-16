@@ -1,0 +1,178 @@
+{
+  "document": "Common Medical Procedures",
+  "purpose": "Image-generation brief for patient-facing medical illustrations",
+  "selection_method": "Include an image when anatomy, instrument path, positioning, equipment flow, or a sequence of actions is materially easier to understand visually than in prose. Prefer diagrams for internal anatomy and procedural pathways; use realistic clinical scenes only when patient positioning or experience is the main teaching point.",
+  "global_print_requirements": {
+    "orientation": "landscape",
+    "aspect_ratio": "4:3",
+    "recommended_canvas": "11 x 8.5 inches at 300 dpi, 3300 x 2550 pixels",
+    "color": "full color, print-safe, high contrast, CMYK-friendly palette",
+    "style": "clean medical textbook illustration, anatomically careful, calm and non-alarming, uncluttered composition, generous margins, no watermark, no logo",
+    "text_policy": "Use no text inside the image whenever possible. If labels are essential, use no more than four short labels, large sans-serif lettering, and provide the same labels in the chapter text.",
+    "safety_policy": "Show consenting adults or neutral anatomical models, no identifiable patient, no blood or graphic tissue unless essential, no brand names, no unsupported claims, and no instructional detail that could encourage unsupervised performance of a medical procedure."
+  },
+  "images": [
+    {
+      "priority": "high",
+      "procedure": "Echocardiogram",
+      "image_type": "medical diagram with small clinical inset",
+      "file_name": "echocardiogram_types_and_probe_positions.png",
+      "caption": "Echocardiography uses ultrasound from different approaches to assess the heart and blood flow.",
+      "why_visual": "The differences between transthoracic, transesophageal, Doppler, and stress echocardiography are spatial and difficult to explain with prose alone.",
+      "prompt": "Create a landscape, print-ready medical textbook illustration of echocardiography. Use a large central cutaway anatomical diagram of the heart showing the four chambers, four valves, and direction of blood flow with subtle arrows. Around it, show three restrained inset views: a transthoracic probe resting on the chest wall, a transesophageal probe in the esophagus behind the heart, and a stress-echocardiography patient walking on a treadmill while monitored. Use consistent anatomy, realistic but non-gory clinical equipment, blue and red flow accents, and clear separation between insets. Use no text except optional tiny labels TTE, TEE, and stress echo; preferably omit labels and rely on composition. Do not show a probe entering the heart, do not confuse ECG electrodes with ultrasound, and do not depict a surgical incision."
+    },
+    {
+      "priority": "high",
+      "procedure": "Electrocardiogram",
+      "image_type": "anatomical placement diagram",
+      "file_name": "electrocardiogram_electrode_placement.png",
+      "caption": "A resting ECG records the heart's electrical activity through skin electrodes on the chest and limbs.",
+      "why_visual": "Patients commonly confuse an ECG with an echocardiogram; electrode placement and the distinction between electrical recording and imaging benefit from a diagram.",
+      "prompt": "Create a landscape medical diagram for a patient book showing a relaxed adult lying supine for a 12-lead resting ECG. Show the torso and limbs from a slightly elevated front view, with anatomically accurate adhesive electrodes on the standard chest and limb positions and thin leads connected to a compact ECG recorder at the side. Include a small inset of a simple ECG waveform without diagnostic abnormalities. Use minimal text, no more than the optional labels V1 through V6 and limb leads, with large readable lettering. Emphasize that electrodes record electrical activity; do not show ultrasound, needles, or an echocardiography probe. Clean white background, restrained blue and red accents, generous margins, print-ready landscape composition."
+    },
+    {
+      "priority": "high",
+      "procedure": "Colonoscopy",
+      "image_type": "cutaway anatomical sequence diagram",
+      "file_name": "colonoscopy_scope_path_and_polyp_removal.png",
+      "caption": "During colonoscopy, a flexible camera examines the colon and may permit biopsy or removal of selected polyps.",
+      "why_visual": "The scope route, bowel preparation goal, and difference between inspection and polyp removal are clearer in a cross-sectional diagram.",
+      "prompt": "Create a landscape, print-ready medical textbook diagram of colonoscopy using a translucent side cutaway of the lower abdomen and pelvis. Show the flexible colonoscope entering through the anus and following the rectum, sigmoid colon, descending colon, transverse colon, ascending colon, and cecum. Use one small inset showing a normal mucosal view and a second inset showing a snare removing a small polyp, without gore. Show gentle insufflation as subtle expansion, not exaggerated. Use simple arrows and at most four short labels: rectum, colon, cecum, polyp. Do not imply that every polyp is cancerous, do not show the scope entering the small intestine beyond the cecum, and do not include bowel-prep instructions in the image."
+    },
+    {
+      "priority": "high",
+      "procedure": "Upper GI endoscopy",
+      "image_type": "cutaway anatomical procedure diagram",
+      "file_name": "upper_gi_endoscopy_scope_path.png",
+      "caption": "Upper endoscopy examines the esophagus, stomach, and duodenum and can obtain tissue samples or treat selected findings.",
+      "why_visual": "The route through the upper digestive tract and the difference from colonoscopy are immediately understandable in a cutaway image.",
+      "prompt": "Create a landscape medical textbook cutaway illustration of upper gastrointestinal endoscopy. Show a side-profile adult head, neck, chest, and upper abdomen with a flexible endoscope passing gently through the mouth, esophagus, stomach, and first part of the small intestine, ending in the duodenum. Include a small inset of a biopsy forceps taking a tiny sample from the mucosa, with no blood or graphic tissue. Show a calm sedated patient position only as a small contextual inset, not as a dramatic scene. Use at most four short labels: esophagus, stomach, duodenum, biopsy. Accurate proportions, clear scope path, white background, landscape 4:3, print-safe colors, no text-heavy infographic."
+    },
+    {
+      "priority": "high",
+      "procedure": "Bronchoscopy",
+      "image_type": "airway cutaway diagram",
+      "file_name": "bronchoscopy_airway_scope_and_sampling.png",
+      "caption": "Bronchoscopy allows direct examination of the airways and, when needed, collection of samples or treatment of an obstruction.",
+      "why_visual": "The branching airway anatomy, flexible scope path, and sampling options are difficult for patients to picture from prose.",
+      "prompt": "Create a landscape medical textbook illustration of flexible bronchoscopy. Use a front-side cutaway of the head, neck, trachea, and branching bronchi with a flexible bronchoscope entering through the mouth and advancing into the airway. Add restrained inset views of a camera view of an airway and a small sampling brush or biopsy instrument through the working channel. Show the airway branching accurately, no lung incision, no blood, no dramatic distress, and no brand-specific equipment. Use only optional short labels trachea, bronchi, camera, sample; minimal text. Print-ready 4:3 landscape with generous whitespace and high anatomical clarity."
+    },
+    {
+      "priority": "high",
+      "procedure": "Lumbar puncture",
+      "image_type": "positioning and anatomy diagram",
+      "file_name": "lumbar_puncture_lower_back_anatomy_and_position.png",
+      "caption": "Lumbar puncture collects cerebrospinal fluid from the lower back, below the usual end of the spinal cord.",
+      "why_visual": "Patient positioning and the relationship between the needle, vertebrae, spinal canal, and spinal cord require spatial explanation.",
+      "prompt": "Create a landscape, print-ready medical illustration of lumbar puncture using two coordinated panels. Panel one: an adult lying on the side with knees gently drawn up and back flexed, while a clinician performs the procedure with sterile technique. Panel two: a sagittal cutaway of the lower spine showing lumbar vertebrae, the spinal cord ending above the needle level, the cauda equina, the thecal sac, and a thin spinal needle entering between lower lumbar vertebrae to collect cerebrospinal fluid. Use a non-gory, educational style and clearly show the needle below the usual spinal-cord termination. Use at most four labels: spinal cord, thecal sac, lumbar space, CSF. Do not show the needle touching the spinal cord and do not imply that lying flat prevents every headache."
+    },
+    {
+      "priority": "high",
+      "procedure": "Cystoscopy",
+      "image_type": "urinary tract cutaway diagram",
+      "file_name": "cystoscopy_urethra_bladder_scope_path.png",
+      "caption": "Cystoscopy examines the urethra and bladder through the urinary opening and may allow biopsy or treatment.",
+      "why_visual": "The route of the cystoscope and the anatomy inspected are much easier to understand in a pelvic cutaway.",
+      "prompt": "Create a landscape, print-ready anatomical diagram of cystoscopy using a clean neutral pelvic cutaway, with a female and male anatomy option represented in two small balanced insets or a clearly general pelvic view. Show a flexible cystoscope passing through the urethra into the bladder, the bladder filled with sterile fluid, and the camera viewing the bladder lining. Add a small inset showing a biopsy instrument without tissue trauma or blood. Use accurate urinary anatomy, calm clinical colors, no sexualized presentation, no brand names, and no more than four short labels: urethra, bladder, cystoscope, biopsy."
+    },
+    {
+      "priority": "high",
+      "procedure": "Endoscopic retrograde cholangiopancreatography",
+      "image_type": "hepatobiliary cutaway diagram",
+      "file_name": "ercp_bile_duct_scope_and_stent.png",
+      "caption": "ERCP uses an endoscope and X-ray guidance to treat selected bile-duct and pancreatic-duct problems.",
+      "why_visual": "The relationship between the duodenum, bile duct, pancreatic duct, stone, and stent is highly spatial and otherwise confusing.",
+      "prompt": "Create a landscape medical textbook cutaway diagram of ERCP. Show the duodenum, ampulla, common bile duct, gallbladder, pancreatic duct, and liver in accurate relationship. Show a side-view endoscope positioned in the duodenum with a small catheter entering the ampulla; use a separate inset to show contrast flowing through the ducts and another to show removal of a small duct stone or placement of a short stent. Keep the anatomy uncluttered, avoid depicting a large obstructing cancer as a certainty, use no gore, and use at most four short labels: duodenum, bile duct, pancreatic duct, stent. Landscape 4:3, high-resolution, print-safe."
+    },
+    {
+      "priority": "high",
+      "procedure": "Central venous catheter and PICC placement",
+      "image_type": "vascular access pathway diagram",
+      "file_name": "central_venous_catheter_and_picc_pathways.png",
+      "caption": "Central venous catheters and PICC lines provide access to large veins for selected treatments and monitoring.",
+      "why_visual": "The difference between insertion site and catheter tip location is difficult to communicate without a vascular pathway diagram.",
+      "prompt": "Create a landscape print-ready medical diagram comparing a central venous catheter and a peripherally inserted central catheter. Use a torso cutaway with simplified but accurate major veins and heart silhouette. Show one catheter entering near the neck or upper chest and another entering through an upper-arm vein, with both catheter tips ending near the lower superior vena cava/right atrium junction, not inside the heart. Include a small ultrasound-guided insertion inset with sterile probe cover, but no procedural gore. Use no more than four short labels: upper-arm vein, neck vein, catheter, tip. Make the pathways visually distinct and do not show a catheter entering an artery."
+    },
+    {
+      "priority": "high",
+      "procedure": "Nephrostomy placement",
+      "image_type": "kidney and urinary drainage diagram",
+      "file_name": "nephrostomy_tube_kidney_and_drainage_path.png",
+      "caption": "A nephrostomy tube drains urine directly from the kidney when normal flow through the ureter is blocked.",
+      "why_visual": "Patients need to understand that the tube enters the kidney through the back and drains into an external collection bag.",
+      "prompt": "Create a landscape, print-ready medical cutaway illustration of percutaneous nephrostomy. Show a posterior-oblique torso with one kidney, renal pelvis, ureter, bladder, and a thin nephrostomy catheter entering through the flank into the renal collecting system. The catheter should continue outside the body to a collection bag, with urine flow shown by a subtle arrow. Add a small inset showing ureteral obstruction without implying a specific cause. Use calm clinical anatomy, no blood, no open surgery, no brand names, and at most four short labels: kidney, ureter, catheter, collection bag. Ensure the tube is in the collecting system rather than the kidney tissue or a blood vessel."
+    },
+    {
+      "priority": "high",
+      "procedure": "Arthrocentesis and joint injection",
+      "image_type": "joint cross-section diagram",
+      "file_name": "arthrocentesis_joint_aspiration_and_injection.png",
+      "caption": "A needle may remove joint fluid for analysis or deliver medicine into the joint space.",
+      "why_visual": "The distinction between aspiration and injection, and the location of the joint space, is clearer in a cross-section.",
+      "prompt": "Create a landscape medical textbook diagram of a knee joint in clean cross-section. Show the femur, tibia, cartilage surfaces, synovial cavity, synovial lining, and a sterile needle entering the joint space from an anatomically safe lateral approach. Use two small sequential insets: one with a syringe drawing fluid out for analysis and one with a syringe delivering medication into the joint. Avoid showing a needle inside cartilage, bone, or a blood vessel; no gore, no brand names, no text-heavy callouts. Use no more than four short labels: cartilage, joint space, fluid, needle. Print-ready 4:3 landscape."
+    },
+    {
+      "priority": "medium",
+      "procedure": "Intrauterine device insertion",
+      "image_type": "pelvic anatomy sequence diagram",
+      "file_name": "iud_insertion_uterus_and_cervix.png",
+      "caption": "An intrauterine device is placed through the cervix into the uterine cavity, with retrieval strings extending through the cervix.",
+      "why_visual": "The final position of the device relative to the cervix and uterine cavity is important and difficult to visualize in prose.",
+      "prompt": "Create a landscape, print-ready medical textbook diagram of IUD insertion in a neutral sagittal pelvic cutaway. Show the uterus, uterine cavity, cervix, and upper vagina. Use three simple sequential views: speculum and cervical visualization, insertion tube passing through the cervix, and the IUD correctly positioned in the uterine cavity with short strings passing through the cervix. Use a non-sexualized, respectful anatomical style, no graphic detail, no brand-specific device, and at most four short labels: uterus, cavity, cervix, strings. Do not show the device in the fallopian tube or embedded in the uterine wall."
+    },
+    {
+      "priority": "medium",
+      "procedure": "Colposcopy and LEEP",
+      "image_type": "cervical examination and treatment diagram",
+      "file_name": "colposcopy_and_leep_cervix_sequence.png",
+      "caption": "Colposcopy magnifies the cervix for assessment; LEEP removes selected abnormal tissue with a thin electrical loop.",
+      "why_visual": "The difference between visual examination, biopsy, and excisional treatment is easily confused without a sequence diagram.",
+      "prompt": "Create a landscape medical textbook illustration in three balanced panels. Panel one shows a colposcope positioned outside the vagina while the cervix is viewed, with no scope inserted into the uterus. Panel two shows a tiny cervical biopsy sample being taken, without gore. Panel three shows a thin loop electrode removing a shallow, localized area of abnormal cervical tissue, with smoke evacuation represented subtly. Use accurate cervical anatomy, neutral non-sexualized presentation, no graphic tissue, no brand names, and no more than four short labels: cervix, colposcope, biopsy, loop."
+    },
+    {
+      "priority": "medium",
+      "procedure": "Hemodialysis",
+      "image_type": "blood-circuit and equipment diagram",
+      "file_name": "hemodialysis_blood_flow_circuit.png",
+      "caption": "During hemodialysis, blood travels through a dialyzer where selected waste products and excess fluid are removed before return to the patient.",
+      "why_visual": "The extracorporeal blood circuit and dialyzer function are much easier to understand as a flow diagram.",
+      "prompt": "Create a landscape, print-ready medical textbook diagram of hemodialysis. Show a seated adult connected through a fistula or dialysis catheter to an extracorporeal circuit, with blood flowing from the patient to a dialyzer and back. Use a large simplified cross-section of the dialyzer showing blood on one side of a semipermeable membrane and dialysate flowing countercurrent on the other side; use subtle arrows for waste and excess fluid movement. Include no brand names, no frightening tubes, no blood splatter, and no numerical prescription settings. Use at most four short labels: access, blood, dialyzer, dialysate."
+    },
+    {
+      "priority": "medium",
+      "procedure": "Epley maneuver",
+      "image_type": "position sequence diagram",
+      "file_name": "epley_maneuver_head_position_sequence.png",
+      "caption": "The Epley maneuver uses a sequence of head and body positions to move displaced inner-ear particles.",
+      "why_visual": "The procedure is defined by a sequence of positions and rotations that prose alone can make difficult to follow.",
+      "prompt": "Create a landscape medical textbook sequence diagram showing the Epley maneuver in four simplified panels with the same adult patient and clinician support. Show the head initially turned, the patient reclining, the head rotated to the opposite side, and the patient turning onto the side before sitting up. Add a subtle inner-ear inset showing particles moving through a semicircular canal, without implying a diagnosis from the picture alone. Use arrows for motion, minimal text, no more than four short position labels, and clear left-right orientation. Do not present it as universally safe for unsupervised home use; show clinician guidance and support."
+    },
+    {
+      "priority": "medium",
+      "procedure": "Percutaneous lung biopsy",
+      "image_type": "chest cross-section diagram",
+      "file_name": "percutaneous_lung_biopsy_needle_path.png",
+      "caption": "Image-guided percutaneous lung biopsy uses a needle through the chest wall to sample a selected lung lesion.",
+      "why_visual": "The needle path, target lesion, pleura, and pneumothorax risk are anatomically important and difficult to describe briefly.",
+      "prompt": "Create a landscape, print-ready medical cutaway diagram of CT- or ultrasound-guided percutaneous lung biopsy. Show the chest wall, ribs, pleural space, lung, and one clearly localized nodule, with a biopsy needle approaching the lesion through the chest wall under imaging guidance. Include a small side inset showing the needle tip within the target and a non-graphic specimen in a container. Do not show the needle crossing the heart, a major vessel, or the opposite lung; do not depict a guaranteed cancer diagnosis. Use at most four short labels: chest wall, pleura, lung nodule, needle."
+    },
+    {
+      "priority": "medium",
+      "procedure": "Endotracheal intubation",
+      "image_type": "airway placement diagram",
+      "file_name": "endotracheal_intubation_airway_tube_position.png",
+      "caption": "An endotracheal tube is placed through the mouth into the trachea to support ventilation and protect the airway in selected settings.",
+      "why_visual": "Correct tube position relative to the vocal cords, trachea, and carina is critical and cannot be communicated reliably with a simple photograph.",
+      "prompt": "Create a landscape medical textbook cutaway diagram of endotracheal intubation. Show a neutral adult head and neck in profile with the mouth, tongue, epiglottis, vocal cords, trachea, esophagus, and carina. Show a laryngoscope lifting the tongue and an endotracheal tube passing through the vocal cords into the trachea, with the tube tip above the carina and the cuff below the vocal cords. Include a small inset of waveform or capnography confirmation without text-heavy detail. No blood, no distress, no instructional step numbers, no tube in the esophagus. Use at most four short labels: vocal cords, trachea, esophagus, tube tip."
+    },
+    {
+      "priority": "medium",
+      "procedure": "Cataract surgery",
+      "image_type": "eye cross-section sequence diagram",
+      "file_name": "cataract_surgery_cloudy_lens_and_iol.png",
+      "caption": "Cataract surgery removes the cloudy natural lens and places an artificial intraocular lens inside the eye.",
+      "why_visual": "The change from cloudy natural lens to implanted lens is anatomic and benefits from a simple before-and-after illustration.",
+      "prompt": "Create a landscape, print-ready medical textbook cross-section of the human eye in three stages: a cloudy natural lens causing light scattering, removal of the lens through a tiny corneal incision using a modern phacoemulsification handpiece, and a clear artificial intraocular lens positioned inside the lens capsule. Keep the eye anatomy accurate, use a non-gory surgical style, and show the optic nerve and retina only as context. Use no brand names, no sensational operating-room imagery, and at most four short labels: cornea, cloudy lens, capsule, intraocular lens."
+    }
+  ]
+}
