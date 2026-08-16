@@ -1,0 +1,289 @@
+% Common Medical Procedures: A Comprehensive Reference
+% Compile with: pdflatex medical_procedures.tex
+
+\documentclass[12pt,oneside]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\setlistdepth{9}
+\usepackage{caption}
+\usepackage{tocloft}
+
+\renewcommand{\cftchapnumwidth}{3em}
+
+\geometry{margin=1in}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=cyan,
+    citecolor=red,
+    pdftitle={Common Medical Procedures: A Comprehensive Reference},
+    pdfauthor={Medical Reference Team}
+}
+
+% ============================================================
+% CUSTOM COMMANDS
+% ============================================================
+\newenvironment{testbox}[1][]{\noindent\textbf{#1}\par\noindent\ignorespaces}{\par\vspace{0.5em}}
+\newenvironment{refbox}[1][]{\noindent\textbf{#1}\par\noindent\ignorespaces}{\par\vspace{0.5em}}
+\newenvironment{notebox}[1][]{\noindent\textbf{#1}\par\noindent\ignorespaces}{\par\vspace{0.5em}}
+\newenvironment{pearlbox}[1][]{\noindent\textbf{Clinical Pearl: #1}\par\noindent\ignorespaces}{\par\vspace{0.5em}}
+\newenvironment{warnbox}[1][]{\noindent\textbf{#1}\par\noindent\ignorespaces}{\par\vspace{0.5em}}
+\newenvironment{quickref}[1][]{\noindent\textbf{#1}\par\noindent\ignorespaces}{\par\vspace{0.5em}}
+\newcommand{\chapterquote}[1]{\vspace{-0.5em}\textit{\hfill``#1''}\vspace{1em}}
+
+\title{Common Medical Procedures:\\ A Comprehensive Reference}
+\author{Medical Reference Team}
+\date{\today}
+
+\includeonly{chapters/procedure_acl_reconstruction,chapters/procedure_acupuncture,chapters/procedure_adenoidectomy,chapters/procedure_allergen_immunotherapy,chapters/procedure_amniocentesis,chapters/procedure_amniotomy,chapters/procedure_anoscopy,chapters/procedure_arterial_line_placement,chapters/procedure_arthrocentesis,chapters/procedure_arthroscopy,chapters/procedure_baclofen_pump_therapy,chapters/procedure_balloon_enteroscopy,chapters/procedure_balloon_valvuloplasty,chapters/procedure_barium_enema,chapters/procedure_basic_airway_management,chapters/procedure_biliary_drainage,chapters/procedure_blepharoplasty,chapters/procedure_blood_culture_collection,chapters/procedure_blood_transfusion,chapters/procedure_bone_marrow_biopsy,chapters/procedure_botulinum_toxin_injection,chapters/procedure_brachytherapy,chapters/procedure_breast_augmentation,chapters/procedure_breast_biopsy,chapters/procedure_bronchoalveolar_lavage,chapters/procedure_bronchoscopy,chapters/procedure_bursal_aspiration_and_injection,chapters/procedure_canalith_repositioning,chapters/procedure_capsule_endoscopy,chapters/procedure_cardiac_ablation,chapters/procedure_cardiac_catheterization,chapters/procedure_cardiopulmonary_resuscitation_cpr,chapters/procedure_cardioversion,chapters/procedure_carotid_angioplasty_and_stenting,chapters/procedure_cast_application,chapters/procedure_cataract_surgery,chapters/procedure_central_venous_catheter_placement,chapters/procedure_cerumen_removal,chapters/procedure_cervical_biopsy,chapters/procedure_cervical_cerclage,chapters/procedure_chemotherapy,chapters/procedure_chest_tube_insertion,chapters/procedure_chorionic_villus_sampling,chapters/procedure_circumcision,chapters/procedure_colonoscopy,chapters/procedure_colposcopy,chapters/procedure_contraceptive_implant_insertion,chapters/procedure_coronary_angioplasty,chapters/procedure_cricothyrotomy,chapters/procedure_cryotherapy,chapters/procedure_cystoscopy,chapters/procedure_defibrillation,chapters/procedure_dental_cleaning,chapters/procedure_dental_crowns,chapters/procedure_dental_fillings,chapters/procedure_dental_implants,chapters/procedure_dentures,chapters/procedure_dermabrasion,chapters/procedure_dialysis,chapters/procedure_dilation_and_curettage_d_c,chapters/procedure_echocardiogram,chapters/procedure_electrocardiogram_ecg,chapters/procedure_electroconvulsive_therapy,chapters/procedure_electrodesiccation_and_curettage,chapters/procedure_electromyography_emg,chapters/procedure_embolectomy_thrombectomy,chapters/procedure_endometrial_ablation,chapters/procedure_endometrial_biopsy,chapters/procedure_endoscopic_mucosal_resection,chapters/procedure_endoscopic_retrograde_cholangiopancreatography_ercp,chapters/procedure_endoscopic_sleeve_gastroplasty,chapters/procedure_endoscopic_ultrasound_eus,chapters/procedure_endoscopy_upper_gi,chapters/procedure_endotracheal_intubation,chapters/procedure_endovenous_ablation,chapters/procedure_enteral_feeding_tube_placement,chapters/procedure_epidural_blood_patch,chapters/procedure_epidural_steroid_injection,chapters/procedure_episiotomy,chapters/procedure_esophageal_ph_monitoring,chapters/procedure_extracorporeal_membrane_oxygenation,chapters/procedure_facet_joint_injection,chapters/procedure_fine_needle_aspiration_fna,chapters/procedure_foley_catheter_insertion,chapters/procedure_fracture_reduction,chapters/procedure_gastric_balloon_insertion,chapters/procedure_gastric_emptying_study,chapters/procedure_gastric_lavage,chapters/procedure_glaucoma_surgery,chapters/procedure_glucose_tolerance_test,chapters/procedure_h_pylori_urea_breath_test,chapters/procedure_hand_arthroplasty,chapters/procedure_hemoglobin_a1c_test,chapters/procedure_hemorrhoid_banding,chapters/procedure_hemorrhoidectomy,chapters/procedure_hida_scan,chapters/procedure_hyperbaric_oxygen_therapy,chapters/procedure_hysteroscopy,chapters/procedure_immunotherapy,chapters/procedure_implantable_venous_access_port,chapters/procedure_in_vitro_fertilization,chapters/procedure_incision_and_drainage,chapters/procedure_inferior_vena_cava_filter_placement,chapters/procedure_injections,chapters/procedure_intraarticular_injection,chapters/procedure_intracranial_pressure_monitoring,chapters/procedure_intraosseous_access,chapters/procedure_intrauterine_device_iud_insertion,chapters/procedure_intrauterine_insemination,chapters/procedure_intravenous_cannulation,chapters/procedure_intravenous_iv_therapy,chapters/procedure_intravitreal_injection,chapters/procedure_kidney_biopsy,chapters/procedure_kyphoplasty,chapters/procedure_laparoscopy,chapters/procedure_laparoscopy_and_dye_test,chapters/procedure_laryngoscopy,chapters/procedure_laser_photocoagulation,chapters/procedure_laser_skin_treatment,chapters/procedure_lithotripsy,chapters/procedure_liver_biopsy,chapters/procedure_lumbar_drain_placement,chapters/procedure_lumbar_puncture,chapters/procedure_lymph_node_biopsy,chapters/procedure_mechanical_ventilation,chapters/procedure_medical_abortion,chapters/procedure_myringotomy_and_tube_insertion,chapters/procedure_nasal_packing,chapters/procedure_nasogastric_tube_insertion,chapters/procedure_needle_decompression_of_pneumothorax,chapters/procedure_nephrostomy_placement,chapters/procedure_nerve_block,chapters/procedure_noninvasive_ventilation,chapters/procedure_operative_vaginal_delivery,chapters/procedure_oxygen_therapy,chapters/procedure_paracentesis,chapters/procedure_percutaneous_endoscopic_gastrostomy_peg,chapters/procedure_percutaneous_lung_biopsy,chapters/procedure_percutaneous_nephrolithotomy_pcnl,chapters/procedure_percutaneous_tumor_ablation,chapters/procedure_pericardiocentesis,chapters/procedure_peripheral_angioplasty_and_stenting,chapters/procedure_peritoneal_dialysis_catheter_placement,chapters/procedure_phlebotomy_considerations_in_children,chapters/procedure_phototherapy,chapters/procedure_picc_line_placement,chapters/procedure_plasmapheresis,chapters/procedure_platelet_rich_plasma_injection,chapters/procedure_pleurodesis,chapters/procedure_prostate_biopsy,chapters/procedure_pulmonary_artery_catheterization,chapters/procedure_radiation_therapy,chapters/procedure_radiofrequency_neurotomy,chapters/procedure_root_canal_treatment,chapters/procedure_sclerotherapy,chapters/procedure_sentinel_node_biopsy,chapters/procedure_sigmoidoscopy,chapters/procedure_skin_biopsy,chapters/procedure_suprapubic_catheterization,chapters/procedure_temporary_cardiac_pacing,chapters/procedure_thoracentesis,chapters/procedure_thyroid_fine_needle_aspiration,chapters/procedure_tips_procedure,chapters/procedure_tonsillectomy,chapters/procedure_total_parenteral_nutrition,chapters/procedure_tracheostomy_management,chapters/procedure_transcranial_magnetic_stimulation,chapters/procedure_transcutaneous_electrical_nerve_stimulation_tens,chapters/procedure_transesophageal_echocardiography,chapters/procedure_trigger_point_injection,chapters/procedure_tubal_ligation,chapters/procedure_turp,chapters/procedure_umbilical_catheterization,chapters/procedure_ureteral_stent_placement,chapters/procedure_ureteroscopy,chapters/procedure_urethrotomy,chapters/procedure_uterine_artery_embolization,chapters/procedure_vaccination,chapters/procedure_vasectomy,chapters/procedure_venepuncture,chapters/procedure_vertebroplasty,chapters/procedure_viscosupplementation,chapters/procedure_vitrectomy,chapters/procedure_wound_debridement,chapters/procedure_wound_suturing,chapters/procedure_barium_enema,chapters/appendix_a_reference_ranges,chapters/appendix_b_critical_values,chapters/appendix_c_interference,chapters/appendix_d_test_codes,chapters/appendix_e_algorithms,chapters/appendix_f_quality_control,chapters/procedure_creatinine_blood_test,chapters/procedure_lasik,chapters/procedure_photorefractive_keratectomy_prk}
+\includeonly{chapters/procedure_acupuncture,chapters/procedure_allergen_immunotherapy,chapters/procedure_amniocentesis,chapters/procedure_amniotomy,chapters/procedure_anoscopy,chapters/procedure_arterial_line_placement,chapters/procedure_arthrocentesis,chapters/procedure_arthroscopy,chapters/procedure_baclofen_pump_therapy,chapters/procedure_balloon_enteroscopy,chapters/procedure_balloon_valvuloplasty,chapters/procedure_barium_enema,chapters/procedure_basic_airway_management,chapters/procedure_biliary_drainage,chapters/procedure_blepharoplasty,chapters/procedure_blood_culture_collection,chapters/procedure_blood_transfusion,chapters/procedure_bone_marrow_biopsy,chapters/procedure_botulinum_toxin_injection,chapters/procedure_brachytherapy,chapters/procedure_breast_augmentation,chapters/procedure_breast_biopsy,chapters/procedure_bronchoalveolar_lavage,chapters/procedure_bronchoscopy,chapters/procedure_bursal_aspiration_and_injection,chapters/procedure_canalith_repositioning,chapters/procedure_capsule_endoscopy,chapters/procedure_cardiac_ablation,chapters/procedure_cardiac_catheterization,chapters/procedure_cardiopulmonary_resuscitation_cpr,chapters/procedure_cardioversion,chapters/procedure_carotid_angioplasty_and_stenting,chapters/procedure_cast_application,chapters/procedure_cataract_surgery,chapters/procedure_central_venous_catheter_placement,chapters/procedure_cerumen_removal,chapters/procedure_cervical_biopsy,chapters/procedure_cervical_cerclage,chapters/procedure_chemotherapy,chapters/procedure_chest_tube_insertion,chapters/procedure_chorionic_villus_sampling,chapters/procedure_circumcision,chapters/procedure_colonoscopy,chapters/procedure_colposcopy,chapters/procedure_contraceptive_implant_insertion,chapters/procedure_coronary_angioplasty,chapters/procedure_cricothyrotomy,chapters/procedure_cryotherapy,chapters/procedure_cystoscopy,chapters/procedure_defibrillation,chapters/procedure_dental_cleaning,chapters/procedure_dental_crowns,chapters/procedure_dental_fillings,chapters/procedure_dental_implants,chapters/procedure_dentures,chapters/procedure_dermabrasion,chapters/procedure_dialysis,chapters/procedure_dilation_and_curettage_d_c,chapters/procedure_echocardiogram,chapters/procedure_electrocardiogram_ecg,chapters/procedure_electroconvulsive_therapy,chapters/procedure_electrodesiccation_and_curettage,chapters/procedure_electromyography_emg,chapters/procedure_embolectomy_thrombectomy,chapters/procedure_endometrial_ablation,chapters/procedure_endometrial_biopsy,chapters/procedure_endoscopic_mucosal_resection,chapters/procedure_endoscopic_retrograde_cholangiopancreatography_ercp,chapters/procedure_endoscopic_sleeve_gastroplasty,chapters/procedure_endoscopic_ultrasound_eus,chapters/procedure_endoscopy_upper_gi,chapters/procedure_endotracheal_intubation,chapters/procedure_endovenous_ablation,chapters/procedure_enteral_feeding_tube_placement,chapters/procedure_epidural_blood_patch,chapters/procedure_epidural_steroid_injection,chapters/procedure_episiotomy,chapters/procedure_esophageal_ph_monitoring,chapters/procedure_extracorporeal_membrane_oxygenation,chapters/procedure_facet_joint_injection,chapters/procedure_fine_needle_aspiration_fna,chapters/procedure_foley_catheter_insertion,chapters/procedure_fracture_reduction,chapters/procedure_gastric_balloon_insertion,chapters/procedure_gastric_emptying_study,chapters/procedure_gastric_lavage,chapters/procedure_hand_arthroplasty,chapters/procedure_hemorrhoid_banding,chapters/procedure_hemorrhoidectomy,chapters/procedure_hida_scan,chapters/procedure_hyperbaric_oxygen_therapy,chapters/procedure_hysteroscopy,chapters/procedure_immunotherapy,chapters/procedure_implantable_venous_access_port,chapters/procedure_in_vitro_fertilization,chapters/procedure_incision_and_drainage,chapters/procedure_inferior_vena_cava_filter_placement,chapters/procedure_injections,chapters/procedure_intraarticular_injection,chapters/procedure_intracranial_pressure_monitoring,chapters/procedure_intraosseous_access,chapters/procedure_intrauterine_device_iud_insertion,chapters/procedure_intrauterine_insemination,chapters/procedure_intravenous_cannulation,chapters/procedure_intravenous_iv_therapy,chapters/procedure_intravitreal_injection,chapters/procedure_kidney_biopsy,chapters/procedure_kyphoplasty,chapters/procedure_laparoscopy,chapters/procedure_laparoscopy_and_dye_test,chapters/procedure_laryngoscopy,chapters/procedure_laser_photocoagulation,chapters/procedure_laser_skin_treatment,chapters/procedure_lithotripsy,chapters/procedure_liver_biopsy,chapters/procedure_lumbar_drain_placement,chapters/procedure_lumbar_puncture,chapters/procedure_lymph_node_biopsy,chapters/procedure_mechanical_ventilation,chapters/procedure_medical_abortion,chapters/procedure_myringotomy_and_tube_insertion,chapters/procedure_nasal_packing,chapters/procedure_nasogastric_tube_insertion,chapters/procedure_needle_decompression_of_pneumothorax,chapters/procedure_nephrostomy_placement,chapters/procedure_nerve_block,chapters/procedure_noninvasive_ventilation,chapters/procedure_operative_vaginal_delivery,chapters/procedure_oxygen_therapy,chapters/procedure_paracentesis,chapters/procedure_percutaneous_endoscopic_gastrostomy_peg,chapters/procedure_percutaneous_lung_biopsy,chapters/procedure_percutaneous_nephrolithotomy_pcnl,chapters/procedure_percutaneous_tumor_ablation,chapters/procedure_pericardiocentesis,chapters/procedure_peripheral_angioplasty_and_stenting,chapters/procedure_peritoneal_dialysis_catheter_placement,chapters/procedure_phlebotomy_considerations_in_children,chapters/procedure_phototherapy,chapters/procedure_picc_line_placement,chapters/procedure_plasmapheresis,chapters/procedure_platelet_rich_plasma_injection,chapters/procedure_pleurodesis,chapters/procedure_prostate_biopsy,chapters/procedure_pulmonary_artery_catheterization,chapters/procedure_radiation_therapy,chapters/procedure_radiofrequency_neurotomy,chapters/procedure_root_canal_treatment,chapters/procedure_sclerotherapy,chapters/procedure_sentinel_node_biopsy,chapters/procedure_sigmoidoscopy,chapters/procedure_skin_biopsy,chapters/procedure_suprapubic_catheterization,chapters/procedure_temporary_cardiac_pacing,chapters/procedure_thoracentesis,chapters/procedure_thyroid_fine_needle_aspiration,chapters/procedure_tips_procedure,chapters/procedure_total_parenteral_nutrition,chapters/procedure_tracheostomy_management,chapters/procedure_transcranial_magnetic_stimulation,chapters/procedure_transcutaneous_electrical_nerve_stimulation_tens,chapters/procedure_transesophageal_echocardiography,chapters/procedure_trigger_point_injection,chapters/procedure_umbilical_catheterization,chapters/procedure_ureteral_stent_placement,chapters/procedure_ureteroscopy,chapters/procedure_urethrotomy,chapters/procedure_uterine_artery_embolization,chapters/procedure_vaccination,chapters/procedure_vasectomy,chapters/procedure_venepuncture,chapters/procedure_vertebroplasty,chapters/procedure_viscosupplementation,chapters/procedure_wound_debridement,chapters/procedure_wound_suturing,chapters/procedure_barium_enema,chapters/procedure_lasik,chapters/procedure_photorefractive_keratectomy_prk}
+\begin{document}
+
+\frontmatter
+
+% Title Page
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    {\Huge \bfseries Common Medical Procedures}\\[0.5cm]
+    {\Large A Comprehensive Reference}\\[1.5cm]
+    {\large \textit{Invasive and Non-Invasive Clinical Procedures}}\\[2cm]
+    {\large Medical Reference Team}\\[0.5cm]
+    {\normalsize MedTests Publishing}\\[1cm]
+    {\today}\\[2cm]
+    {\small \textit{First Edition}}\\
+    \vfill
+    {\footnotesize This book is intended as a reference for healthcare professionals and students.}
+\end{titlepage}
+
+% Copyright Page
+\newpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\noindent \copyright\ 2026 Medical Reference Team. All rights reserved.\\[0.5cm]
+ISBN: 978-0-123456-78-9\\[0.5cm]
+First Edition: 2026
+
+\vspace{1cm}
+\noindent\textbf{Medical Disclaimer}\\[0.5cm]
+
+\noindent\textbf{Not a substitute for professional care.} This book is intended for healthcare professionals, trainees, and students as an educational and reference resource. It is not a substitute for professional medical judgment, diagnosis, or treatment, and it does not constitute the practice of medicine, nursing, or any other licensed health profession.\\[0.3cm]
+
+\noindent\textbf{Use at your own risk.} Every effort has been made to ensure the accuracy and currency of the information presented, but medical knowledge changes rapidly and individual circumstances vary. The authors, editors, and publisher make no warranties, express or implied, regarding the completeness, accuracy, or timeliness of the content and disclaim all liability for any loss, injury, or damage arising from reliance on this material.\\[0.3cm]
+
+\noindent\textbf{Clinical decisions remain with the clinician.} Procedures described herein must be performed only by qualified personnel in appropriate settings and in accordance with institutional policy, facility privileges, and current evidence-based guidelines. This text does not replace facility-specific protocols, manufacturer instructions, or the direct supervision of an authorized preceptor.\\[0.3cm]
+
+\noindent\textbf{Emergencies.} This reference is not for use in an emergency. In an emergency, contact local emergency services (e.g., call 911 in the United States) immediately.\\[0.3cm]
+
+\noindent\textbf{Reader responsibility.} Readers are encouraged to consult current primary literature, national guidelines, and their own institutional policies before applying any information contained herein. Any drug, device, or technique mentioned should be verified against the most recent prescribing information and manufacturer labeling.
+
+% Dedication
+\newpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+    \textit{To the clinicians, laboratorians, and pathologists\\
+    who turn numbers into knowledge and data into diagnoses.}
+\end{center}
+\vspace*{\fill}
+
+% Preface
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+\markboth{Preface}{Preface}
+
+Modern clinical practice relies heavily on both diagnostic testing and interventional care. This book focuses on the clinical procedures themselves --- the invasive and non-invasive interventions performed at the bedside, in the endoscopy suite, in the operating room, and in the interventional radiology lab.
+
+\textbf{Scope:} This book covers medical procedures organized alphabetically by procedure name. Laboratory tests and diagnostic imaging studies are outside the scope of this volume.
+
+\textbf{Organization:} Individual procedures are presented in a standardized format covering: What Is This Procedure?, Alternative Names, Principle, History, Why This Procedure Is Performed, Primary vs Secondary Test, How This Procedure Is Performed, What Preparation Is Needed, Contraindications and Precautions, Risks, What Happens After the Procedure, Understanding Results, Normal Results, and Follow-up Tests.
+
+\vspace{1cm}
+\noindent \textit{Medical Reference Team}\\\\\\\textit{2026}
+
+% Table of Contents
+\setcounter{tocdepth}{0}
+\tableofcontents
+\newpage
+
+% List of Abbreviations
+\chapter*{List of Abbreviations}
+\addcontentsline{toc}{chapter}{List of Abbreviations}
+\markboth{Abbreviations}{Abbreviations}
+
+\begin{footnotesize}
+\begin{longtable}{@{}ll@{}}
+\toprule
+\textbf{Abbreviation} & \textbf{Meaning} \\
+\midrule
+\endhead
+ACL & Anterior cruciate ligament \\
+BAL & Bronchoalveolar lavage \\
+BMT & Bone marrow transplant \\
+CABG & Coronary artery bypass grafting \\
+CPR & Cardiopulmonary resuscitation \\
+CSF & Cerebrospinal fluid \\
+CVC & Central venous catheter \\
+D\&C & Dilation and curettage \\
+ECT & Electroconvulsive therapy \\
+EGD & Esophagogastroduodenoscopy (upper GI endoscopy) \\
+ERCP & Endoscopic retrograde cholangiopancreatography \\
+ET & Endotracheal \\
+EVAR & Endovascular aneurysm repair \\
+FFP & Fresh frozen plasma \\
+FNA & Fine needle aspiration \\
+I\&D & Incision and drainage \\
+ICD & Implantable cardioverter-defibrillator \\
+ICU & Intensive care unit \\
+ILR & Implantable loop recorder \\
+IUD & Intrauterine device \\
+IV & Intravenous \\
+NG & Nasogastric \\
+NPO & Nothing by mouth (nil per os) \\
+OR & Operating room \\
+PACU & Post-anesthesia care unit \\
+PCNL & Percutaneous nephrolithotomy \\
+PD & Peritoneal dialysis \\
+PEG & Percutaneous endoscopic gastrostomy \\
+PICC & Peripherally inserted central catheter \\
+PRBC & Packed red blood cells \\
+SCT & Stem cell transplant \\
+SLNB & Sentinel lymph node biopsy \\
+TAVR & Transcatheter aortic valve replacement \\
+TIPS & Transjugular intrahepatic portosystemic shunt \\
+UAE & Uterine artery embolization \\
+VATS & Video-assisted thoracoscopic surgery \\
+VP & Ventriculoperitoneal \\
+\bottomrule
+\end{longtable}
+\end{footnotesize}
+
+\mainmatter
+
+% Major operative chapters are intentionally excluded from this edition.
+\part{Medical Procedures}
+\include{chapters/procedure_creatinine_blood_test}
+\include{chapters/procedure_lasik}
+\include{chapters/procedure_photorefractive_keratectomy_prk}
+\input{chapters/procedure_leep}
+\input{chapters/procedure_normal_labor_and_vaginal_delivery}
+\input{chapters/procedure_newborn_hearing_screening}
+\input{chapters/procedure_occupational_therapy}
+\input{chapters/procedure_pulse_oximetry}
+\input{chapters/procedure_pelvic_examination}
+\input{chapters/procedure_physical_therapy}
+\input{chapters/procedure_tuberculosis_skin_test_ppd}
+\input{chapters/procedure_allergy_skin_testing}
+\input{chapters/procedure_sacroiliac_joint_injection}
+\input{chapters/procedure_tilt_table_test}
+\input{chapters/procedure_tonometry}
+\input{chapters/procedure_visual_field_test}
+\input{chapters/procedure_nebulizer_treatment}
+\input{chapters/procedure_splint_application}
+\include{chapters/procedure_cerebral_aneurysm_clipping}
+\include{chapters/procedure_liver_resection}
+\include{chapters/procedure_open_abdominal_aortic_aneurysm_repair}
+\include{chapters/procedure_parathyroidectomy}
+\include{chapters/procedure_peripheral_arterial_bypass}
+\include{chapters/procedure_radical_cystectomy}
+\include{chapters/procedure_whipple_pancreaticoduodenectomy}
+\include{chapters/procedure_acl_reconstruction}
+\include{chapters/procedure_carotid_endarterectomy}
+\include{chapters/procedure_colectomy}
+\include{chapters/procedure_craniotomy}
+\include{chapters/procedure_glaucoma_surgery}
+\include{chapters/procedure_inguinal_hernia_repair}
+\include{chapters/procedure_kidney_transplant}
+\include{chapters/procedure_liver_transplant}
+\include{chapters/procedure_left_ventricular_assist_device}
+\include{chapters/procedure_lumpectomy}
+\include{chapters/procedure_lung_lobectomy}
+\include{chapters/procedure_lung_transplant}
+\include{chapters/procedure_mastectomy}
+\include{chapters/procedure_mitral_valve_repair_replacement}
+\include{chapters/procedure_myomectomy}
+\include{chapters/procedure_nephrectomy}
+\include{chapters/procedure_open_reduction_internal_fixation}
+\include{chapters/procedure_permanent_pacemaker_implantation}
+\include{chapters/procedure_radical_prostatectomy}
+\include{chapters/procedure_shoulder_replacement}
+\include{chapters/procedure_sleeve_gastrectomy}
+\include{chapters/procedure_spinal_decompression_laminectomy_discectomy}
+\include{chapters/procedure_splenectomy}
+\include{chapters/procedure_thyroidectomy}
+\include{chapters/procedure_tonsillectomy}
+\include{chapters/procedure_total_knee_replacement}
+\include{chapters/procedure_tubal_ligation}
+\include{chapters/procedure_turp}
+\include{chapters/procedure_vitrectomy}
+\include{chapters/procedure_cardiac_resynchronization_therapy}
+\include{chapters/procedure_h_pylori_urea_breath_test}
+\include{chapters/procedure_heart_transplant}
+\include{chapters/procedure_hemoglobin_a1c_test}
+\include{chapters/procedure_hemorrhoidectomy}
+\include{chapters/procedure_total_hip_replacement}
+\include{chapters/procedure_esophageal_ph_monitoring}
+\input{chapters/procedure_esophageal_manometry}
+\input{chapters/procedure_mohs_surgery}
+\include{chapters/procedure_gastric_banding}
+\include{chapters/procedure_gastric_emptying_study}
+\include{chapters/procedure_glucose_tolerance_test}
+\include{chapters/procedure_hida_scan}
+\include{chapters/procedure_hysterectomy}
+\include{chapters/procedure_thyroid_fine_needle_aspiration}
+\include{chapters/procedure_echocardiogram}
+\include{chapters/procedure_electrocardiogram_ecg}
+\include{chapters/procedure_electromyography_emg}
+\include{chapters/procedure_episiotomy}
+\include{chapters/procedure_transcutaneous_electrical_nerve_stimulation_tens}
+\include{chapters/procedure_cesarean_section}
+\include{chapters/procedure_deep_brain_stimulation}
+\include{chapters/procedure_dental_crowns}
+\include{chapters/procedure_dental_implants}
+\include{chapters/procedure_dentures}
+\include{chapters/procedure_implantable_cardioverter_defibrillator}
+\include{chapters/procedure_cataract_surgery}
+\include{chapters/procedure_cholecystectomy}
+\include{chapters/procedure_circumcision}
+\include{chapters/procedure_colostomy}
+\include{chapters/procedure_baclofen_pump_therapy}
+\include{chapters/procedure_balloon_enteroscopy}
+\include{chapters/procedure_biliary_drainage}
+\include{chapters/procedure_blepharoplasty}
+\include{chapters/procedure_brachytherapy}
+\include{chapters/procedure_breast_augmentation}
+\include{chapters/procedure_breast_reconstruction}
+\include{chapters/procedure_coronary_artery_bypass_graft}
+\include{chapters/procedure_gastric_bypass}
+\include{chapters/procedure_lumbar_spinal_fusion}
+\include{chapters/procedure_adenoidectomy}
+\include{chapters/procedure_anti_reflux_surgery}
+\include{chapters/procedure_aortic_valve_replacement_surgery}
+\include{chapters/procedure_appendectomy}
+\include{chapters/procedure_hand_arthroplasty}
+\include{chapters/procedure_acupuncture}\include{chapters/procedure_allergen_immunotherapy}\include{chapters/procedure_amniocentesis}\include{chapters/procedure_amniotomy}\include{chapters/procedure_anoscopy}\include{chapters/procedure_arterial_line_placement}\include{chapters/procedure_arthrocentesis}\include{chapters/procedure_arthroscopy}\include{chapters/procedure_balloon_valvuloplasty}\include{chapters/procedure_basic_airway_management}\include{chapters/procedure_blood_culture_collection}\include{chapters/procedure_blood_transfusion}\include{chapters/procedure_bone_marrow_biopsy}\include{chapters/procedure_bone_marrow_transplant}\include{chapters/procedure_botulinum_toxin_injection}\include{chapters/procedure_brain_aneurysm_coil_embolization}\include{chapters/procedure_breast_biopsy}\include{chapters/procedure_bronchoalveolar_lavage}\include{chapters/procedure_bronchoscopy}\include{chapters/procedure_bursal_aspiration_and_injection}\include{chapters/procedure_canalith_repositioning}\include{chapters/procedure_capsule_endoscopy}\include{chapters/procedure_cardiac_ablation}\include{chapters/procedure_cardiac_catheterization}\include{chapters/procedure_cardiopulmonary_resuscitation_cpr}\include{chapters/procedure_cardioversion}\include{chapters/procedure_carotid_angioplasty_and_stenting}\include{chapters/procedure_cast_application}\include{chapters/procedure_central_venous_catheter_placement}\include{chapters/procedure_cerumen_removal}\include{chapters/procedure_cervical_biopsy}\include{chapters/procedure_cervical_cerclage}\include{chapters/procedure_chemotherapy}\include{chapters/procedure_chest_tube_insertion}\include{chapters/procedure_chorionic_villus_sampling}\include{chapters/procedure_colonoscopy}\include{chapters/procedure_colposcopy}\include{chapters/procedure_contraceptive_implant_insertion}\include{chapters/procedure_coronary_angioplasty}\include{chapters/procedure_cricothyrotomy}\include{chapters/procedure_cryotherapy}\include{chapters/procedure_cystoscopy}\include{chapters/procedure_defibrillation}\include{chapters/procedure_dental_cleaning}\include{chapters/procedure_dental_fillings}\include{chapters/procedure_dermabrasion}\include{chapters/procedure_dialysis}\include{chapters/procedure_dilation_and_curettage_d_c}\include{chapters/procedure_electroconvulsive_therapy}\include{chapters/procedure_electrodesiccation_and_curettage}\include{chapters/procedure_embolectomy_thrombectomy}\include{chapters/procedure_endometrial_ablation}\include{chapters/procedure_endometrial_biopsy}\include{chapters/procedure_endoscopic_mucosal_resection}\include{chapters/procedure_endoscopic_retrograde_cholangiopancreatography_ercp}\include{chapters/procedure_endoscopic_sleeve_gastroplasty}\include{chapters/procedure_endoscopic_ultrasound_eus}\include{chapters/procedure_endoscopy_upper_gi}\include{chapters/procedure_endotracheal_intubation}\include{chapters/procedure_endovascular_aneurysm_repair_evar}\include{chapters/procedure_endovenous_ablation}\include{chapters/procedure_enteral_feeding_tube_placement}\include{chapters/procedure_epidural_blood_patch}\include{chapters/procedure_epidural_steroid_injection}\include{chapters/procedure_extracorporeal_membrane_oxygenation}\include{chapters/procedure_facet_joint_injection}\include{chapters/procedure_fine_needle_aspiration_fna}\include{chapters/procedure_foley_catheter_insertion}\include{chapters/procedure_fracture_reduction}\include{chapters/procedure_gastric_balloon_insertion}\include{chapters/procedure_gastric_lavage}\include{chapters/procedure_hemorrhoid_banding}\include{chapters/procedure_hyperbaric_oxygen_therapy}\include{chapters/procedure_hysteroscopy}\include{chapters/procedure_immunotherapy}\include{chapters/procedure_implantable_venous_access_port}\include{chapters/procedure_in_vitro_fertilization}\include{chapters/procedure_incision_and_drainage}\include{chapters/procedure_inferior_vena_cava_filter_placement}\include{chapters/procedure_injections}\include{chapters/procedure_intraarticular_injection}\include{chapters/procedure_intracranial_pressure_monitoring}\include{chapters/procedure_intraosseous_access}\include{chapters/procedure_intrauterine_device_iud_insertion}\include{chapters/procedure_intrauterine_insemination}\include{chapters/procedure_intravenous_cannulation}\include{chapters/procedure_intravenous_iv_therapy}\include{chapters/procedure_intravitreal_injection}\include{chapters/procedure_kidney_biopsy}\include{chapters/procedure_kyphoplasty}\include{chapters/procedure_laparoscopy}\include{chapters/procedure_laparoscopy_and_dye_test}\include{chapters/procedure_laryngoscopy}\include{chapters/procedure_laser_photocoagulation}\include{chapters/procedure_laser_skin_treatment}\include{chapters/procedure_lithotripsy}\include{chapters/procedure_liver_biopsy}\include{chapters/procedure_lumbar_drain_placement}\include{chapters/procedure_lumbar_puncture}\include{chapters/procedure_lymph_node_biopsy}\include{chapters/procedure_mechanical_ventilation}\include{chapters/procedure_medical_abortion}\include{chapters/procedure_myringotomy_and_tube_insertion}\include{chapters/procedure_nasal_packing}\include{chapters/procedure_nasogastric_tube_insertion}\include{chapters/procedure_needle_decompression_of_pneumothorax}\include{chapters/procedure_nephrostomy_placement}\include{chapters/procedure_nerve_block}\include{chapters/procedure_noninvasive_ventilation}\include{chapters/procedure_operative_vaginal_delivery}\include{chapters/procedure_oxygen_therapy}\include{chapters/procedure_paracentesis}\include{chapters/procedure_percutaneous_endoscopic_gastrostomy_peg}\include{chapters/procedure_percutaneous_lung_biopsy}\include{chapters/procedure_percutaneous_nephrolithotomy_pcnl}\include{chapters/procedure_percutaneous_tumor_ablation}\include{chapters/procedure_pericardiocentesis}\include{chapters/procedure_peripheral_angioplasty_and_stenting}\include{chapters/procedure_peritoneal_dialysis_catheter_placement}\include{chapters/procedure_phlebotomy_considerations_in_children}\include{chapters/procedure_phototherapy}\include{chapters/procedure_picc_line_placement}\include{chapters/procedure_plasmapheresis}\include{chapters/procedure_platelet_rich_plasma_injection}\include{chapters/procedure_pleurodesis}\include{chapters/procedure_prostate_biopsy}\include{chapters/procedure_pulmonary_artery_catheterization}\include{chapters/procedure_radiation_therapy}\include{chapters/procedure_radiofrequency_neurotomy}\include{chapters/procedure_root_canal_treatment}\include{chapters/procedure_sclerotherapy}\include{chapters/procedure_sentinel_node_biopsy}\include{chapters/procedure_sigmoidoscopy}\include{chapters/procedure_skin_biopsy}\include{chapters/procedure_stem_cell_transplant}\include{chapters/procedure_suprapubic_catheterization}\include{chapters/procedure_temporary_cardiac_pacing}\include{chapters/procedure_thoracentesis}\include{chapters/procedure_tips_procedure}\include{chapters/procedure_total_parenteral_nutrition}\include{chapters/procedure_tracheostomy_management}\include{chapters/procedure_transcatheter_aortic_valve_replacement_tavr}\include{chapters/procedure_transcranial_magnetic_stimulation}\include{chapters/procedure_transesophageal_echocardiography}\include{chapters/procedure_trigger_point_injection}\include{chapters/procedure_umbilical_catheterization}\include{chapters/procedure_ureteral_stent_placement}\include{chapters/procedure_ureteroscopy}\include{chapters/procedure_urethrotomy}\include{chapters/procedure_uterine_artery_embolization}\include{chapters/procedure_vaccination}\include{chapters/procedure_vasectomy}\include{chapters/procedure_venepuncture}\include{chapters/procedure_vertebroplasty}\include{chapters/procedure_viscosupplementation}\include{chapters/procedure_wound_debridement}\include{chapters/procedure_wound_suturing}
+\include{chapters/procedure_barium_enema}
+\backmatter
+
+\include{chapters/appendix_a_reference_ranges}
+\include{chapters/appendix_b_critical_values}
+\include{chapters/appendix_c_interference}
+\include{chapters/appendix_d_test_codes}
+\include{chapters/appendix_e_algorithms}
+\include{chapters/appendix_f_quality_control}
+
+\end{document}
