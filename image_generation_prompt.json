@@ -182,6 +182,15 @@
       "caption": "Acupuncture uses sterile, single-use needles placed at selected points while the patient rests in a supported position.",
       "why_visual": "A calm clinical image can show what the session looks like, how needles are handled, and why placement must be performed by a trained practitioner; a visual is preferable to presenting traditional meridians as established anatomy.",
       "prompt": "Create a landscape, print-ready medical textbook illustration of a licensed practitioner performing acupuncture on a consenting adult lying comfortably in a supported side-lying or prone position. Show several very thin sterile single-use needles placed superficially in appropriate soft-tissue regions of the upper back, forearm, and lower leg, with clean hand hygiene, a sterile packaged needle, and a sharps container visible in the background. Use a calm non-gory clinical setting and natural patient dignity. Include a small inset showing a biomedical cross-section of a needle in superficial tissue with nearby sensory nerve endings, clearly presented as a possible biomedical explanation rather than a definitive map of every acupuncture effect. Do not show needles near the front of the neck, eyes, or chest; do not show unsafe depth; do not depict qi or meridians as anatomical structures; use no more than two short labels: sterile needle, sharps container."
+    },
+    {
+      "priority": "medium",
+      "procedure": "Balloon enteroscopy",
+      "image_type": "small-intestine cutaway and scope-advancement diagram",
+      "file_name": "balloon_enteroscopy_small_bowel_scope_path.png",
+      "caption": "Balloon enteroscopy uses an endoscope and balloon-assisted technique to examine portions of the small intestine beyond the reach of routine endoscopy.",
+      "why_visual": "The long, folded small intestine and the way an overtube and balloon help advance the scope are difficult to understand from prose alone.",
+      "prompt": "Create a landscape, print-ready medical textbook illustration of balloon enteroscopy. Use a clean abdominal cutaway showing the stomach, duodenum, long coiled small intestine, and colon for orientation. Show a flexible enteroscope passing through the mouth and upper digestive tract into the small intestine, with a transparent overtube and one or two small balloons alternately anchoring the bowel so the scope can advance. Add one restrained inset showing a biopsy forceps or hemostasis tool passing through the scope, without blood or graphic tissue. Make clear that the scope examines selected portions of the small bowel rather than every loop being visible at once. Use at most four short labels: small intestine, overtube, balloon, scope. No brand names, no exaggerated balloon size, no text-heavy infographic, accurate anatomy, generous margins, landscape 4:3, high-resolution print-ready composition."
     }
   ]
 }
