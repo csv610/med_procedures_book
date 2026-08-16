@@ -173,6 +173,15 @@
       "caption": "Cataract surgery removes the cloudy natural lens and places an artificial intraocular lens inside the eye.",
       "why_visual": "The change from cloudy natural lens to implanted lens is anatomic and benefits from a simple before-and-after illustration.",
       "prompt": "Create a landscape, print-ready medical textbook cross-section of the human eye in three stages: a cloudy natural lens causing light scattering, removal of the lens through a tiny corneal incision using a modern phacoemulsification handpiece, and a clear artificial intraocular lens positioned inside the lens capsule. Keep the eye anatomy accurate, use a non-gory surgical style, and show the optic nerve and retina only as context. Use no brand names, no sensational operating-room imagery, and at most four short labels: cornea, cloudy lens, capsule, intraocular lens."
+    },
+    {
+      "priority": "medium",
+      "procedure": "Acupuncture",
+      "image_type": "clinical positioning and safety illustration",
+      "file_name": "acupuncture_patient_positioning_and_needle_safety.png",
+      "caption": "Acupuncture uses sterile, single-use needles placed at selected points while the patient rests in a supported position.",
+      "why_visual": "A calm clinical image can show what the session looks like, how needles are handled, and why placement must be performed by a trained practitioner; a visual is preferable to presenting traditional meridians as established anatomy.",
+      "prompt": "Create a landscape, print-ready medical textbook illustration of a licensed practitioner performing acupuncture on a consenting adult lying comfortably in a supported side-lying or prone position. Show several very thin sterile single-use needles placed superficially in appropriate soft-tissue regions of the upper back, forearm, and lower leg, with clean hand hygiene, a sterile packaged needle, and a sharps container visible in the background. Use a calm non-gory clinical setting and natural patient dignity. Include a small inset showing a biomedical cross-section of a needle in superficial tissue with nearby sensory nerve endings, clearly presented as a possible biomedical explanation rather than a definitive map of every acupuncture effect. Do not show needles near the front of the neck, eyes, or chest; do not show unsafe depth; do not depict qi or meridians as anatomical structures; use no more than two short labels: sterile needle, sharps container."
     }
   ]
 }
