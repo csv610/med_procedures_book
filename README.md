@@ -4,6 +4,8 @@ An educational reference book covering common medical procedures, clinical inter
 
 The book is written in LaTeX and includes both the complete source and a compiled PDF.
 
+The [source-verification matrix](SOURCE_MATRIX.md) records the expected source standard and the current citation-audit status for each active chapter.
+
 ## Contents
 
 Each included chapter is designed to explain a procedure in clear clinical language, including relevant indications, preparation, performance, precautions, risks, recovery, results, and follow-up.
