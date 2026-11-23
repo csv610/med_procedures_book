@@ -21,9 +21,10 @@ Some excluded source chapters remain in the chapters directory for archival and 
 
 ~~~text
 .
-├── medical_procedures.tex   # Main LaTeX document
+├── med_procedures.tex      # Main LaTeX document
 ├── medical_procedures.pdf   # Compiled book
 ├── chapters/                # Procedure chapter sources
+├── images/chapters/          # Chapter overview illustrations
 └── README.md               # Project documentation
 ~~~
 
@@ -32,8 +33,8 @@ Some excluded source chapters remain in the chapters directory for archival and 
 Install a LaTeX distribution such as TeX Live or MiKTeX, then run:
 
 ~~~bash
-pdflatex -interaction=nonstopmode -halt-on-error medical_procedures.tex
-pdflatex -interaction=nonstopmode -halt-on-error medical_procedures.tex
+pdflatex -interaction=nonstopmode -halt-on-error med_procedures.tex
+pdflatex -interaction=nonstopmode -halt-on-error med_procedures.tex
 ~~~
 
 The second pass updates cross-references and the table of contents. Build artifacts such as AUX, LOG, OUT, and TOC files are generated locally and are not part of the repository's maintained source.

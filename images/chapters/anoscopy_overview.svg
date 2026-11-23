@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#fbfdff"/><stop offset="1" stop-color="#eef5f7"/></linearGradient>
+    <linearGradient id="skin" x2="0" y2="1"><stop stop-color="#f0c8ae"/><stop offset="1" stop-color="#dca88f"/></linearGradient>
+    <linearGradient id="steel" x2="0" y2="1"><stop stop-color="#f5f8fa"/><stop offset=".5" stop-color="#9aaab5"/><stop offset="1" stop-color="#dfe7eb"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#16324f" flood-opacity=".12"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#149b9a"/></marker>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#bg)"/>
+  <text x="800" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#173453">Anoscopy: Patient Position and Examination</text>
+  <rect x="40" y="115" width="730" height="900" rx="28" fill="#ffffff" stroke="#d6e3e9" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="800" y="115" width="760" height="900" rx="28" fill="#ffffff" stroke="#d6e3e9" stroke-width="3" filter="url(#shadow)"/>
+  <text x="405" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#173453">1. Patient positioning</text>
+  <text x="1180" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#173453">2. What the instrument examines</text>
+
+  <!-- examination table -->
+  <rect x="100" y="742" width="590" height="28" rx="14" fill="#3b8791"/>
+  <path d="M160 770v95m470-95v95" stroke="#58717e" stroke-width="18" stroke-linecap="round"/>
+  <rect x="115" y="700" width="260" height="44" rx="20" fill="#d9e7ec"/>
+  <!-- patient in side-lying position, fully covered -->
+  <path d="M210 660 C205 590 235 525 305 500 C368 477 430 510 460 555 C500 540 552 566 574 610 C593 650 577 694 539 713 L365 714 C320 694 270 688 210 660Z" fill="url(#skin)" stroke="#9c7768" stroke-width="4"/>
+  <ellipse cx="279" cy="484" rx="75" ry="79" fill="url(#skin)" stroke="#9c7768" stroke-width="4"/>
+  <path d="M216 473 Q238 397 311 418 Q351 430 354 470 Q333 450 307 455 Q272 464 249 496Z" fill="#314657"/>
+  <path d="M215 499 Q195 517 210 536" fill="none" stroke="#9c7768" stroke-width="5" stroke-linecap="round"/>
+  <path d="M258 685 C280 740 360 774 442 745 C485 729 509 687 538 665 L592 668 C574 730 531 787 469 807 C378 836 280 792 222 746Z" fill="#2c536d" stroke="#1d4058" stroke-width="4"/>
+  <!-- drape -->
+  <path d="M414 524 Q488 493 576 541 L672 689 Q604 734 502 718 Q448 649 414 524Z" fill="#d8f0ed" stroke="#8cbfbc" stroke-width="4"/>
+  <path d="M570 555 Q619 527 663 545 L703 597 Q683 633 646 641" fill="none" stroke="#f0c8ae" stroke-width="23" stroke-linecap="round"/>
+  <!-- clinician sleeve and gloved hand, kept outside the drape -->
+  <path d="M704 523 Q665 522 642 552 L620 594" fill="none" stroke="#22536b" stroke-width="36" stroke-linecap="round"/>
+  <path d="M624 590 Q612 605 626 617 Q639 625 654 609 L675 586 Q680 573 667 566 Q657 561 647 571Z" fill="#d8f1f2" stroke="#6ba4aa" stroke-width="3"/>
+  <rect x="132" y="882" width="560" height="76" rx="18" fill="#eaf5f6"/>
+  <text x="412" y="916" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" fill="#27485d">The patient lies on the side with knees gently flexed.</text>
+  <text x="412" y="946" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#55717f">A drape preserves privacy; the clinician guides the exam.</text>
+
+  <!-- schematic cutaway -->
+  <path d="M1004 273 C1004 230 1048 206 1090 206 H1385 C1427 206 1465 239 1465 281 V581 C1465 660 1411 716 1336 716 H1132 C1057 716 1004 660 1004 581Z" fill="#f6d7d1" stroke="#b77673" stroke-width="5"/>
+  <path d="M1102 253 C1102 228 1122 215 1147 215 H1325 C1351 215 1367 233 1367 259 V573 C1367 620 1335 648 1290 648 H1178 C1134 648 1102 620 1102 573Z" fill="#fcebe5" stroke="#d69b92" stroke-width="4"/>
+  <path d="M1145 250 Q1234 232 1323 250 V557 Q1323 598 1284 598 H1184 Q1145 598 1145 557Z" fill="#e8aaa2" opacity=".76"/>
+  <path d="M1170 583 C1170 643 1180 690 1214 732 L1214 803 Q1234 828 1254 803 L1254 732 C1288 690 1298 643 1298 583" fill="#e7a39c" stroke="#a96666" stroke-width="5"/>
+  <path d="M1200 585 C1200 657 1208 694 1234 729 L1234 812" fill="none" stroke="#fff7f1" stroke-width="42" stroke-linecap="round"/>
+  <!-- anoscope shaft in canal -->
+  <path d="M1234 895 L1234 691 Q1234 664 1234 643" fill="none" stroke="url(#steel)" stroke-width="50" stroke-linecap="round"/>
+  <path d="M1234 689 L1234 619" stroke="#149b9a" stroke-width="11" stroke-linecap="round"/>
+  <rect x="1190" y="864" width="88" height="56" rx="15" fill="#506b79" stroke="#294858" stroke-width="4"/>
+  <circle cx="1234" cy="890" r="13" fill="#d5f2ed"/>
+  <path d="M1234 620 L1234 571" stroke="#149b9a" stroke-width="5" stroke-dasharray="8 9" marker-end="url(#arrow)"/>
+
+  <!-- labels and leader lines -->
+  <text x="866" y="328" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173453">Rectum</text>
+  <path d="M950 321 H1070" fill="none" stroke="#55717f" stroke-width="3"/>
+  <text x="858" y="782" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173453">Anal canal</text>
+  <path d="M977 775 H1160" fill="none" stroke="#55717f" stroke-width="3"/>
+  <text x="1300" y="866" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173453">Anoscope</text>
+  <path d="M1290 858 L1266 835" fill="none" stroke="#55717f" stroke-width="3"/>
+  <rect x="850" y="938" width="660" height="48" rx="14" fill="#eaf5f6"/>
+  <text x="1180" y="970" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#27485d">The short lighted tube lets the clinician inspect the anal canal and lower rectum.</text>
+</svg>
